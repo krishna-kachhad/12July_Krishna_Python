@@ -1,0 +1,6 @@
+print('welcome to Tops Technology')
+print("welcome to Tops Technology")
+print('welcome to "Tops Technology"')
+print("welcome to 'Tops Technology'")
+print('''welcome to Tops Technology''') #this is also used for commment('''''')
+print("""welcome to Tops Technology""") #this is also used for commment("""""")
