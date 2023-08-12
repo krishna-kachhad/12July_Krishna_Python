@@ -20,6 +20,10 @@ for x in range(0,12):
         print(x,end="    ")
     else:
         print(x)'''
+
+n=int(input("enter n"))
+for i in range(n,2):
+    print(i)
         
  # WAP to print employee information(id,name,address) with get input from user   
 emp=[]
@@ -31,7 +35,8 @@ for i in range(n):
     x1=input("Enter emp id:")
     x2=input("Enter emp name:")
     x3=input("Enter emp salary:")
-    emp.append(x1)
-    emp.append(x2)
-    emp.append(x3)
-    print(f"[id: {x1}, name: {x2}, salary: {x3}]")
+    a=[x1, x2, x3]
+    emp.append(a)
+for b in emp:
+    print(b)
+    

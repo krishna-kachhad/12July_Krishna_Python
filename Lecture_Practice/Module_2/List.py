@@ -1,3 +1,4 @@
+#List is a collection which is ordered and changeable. Allows duplicate members.
 fruit=['apple', 'banana', 'grapes', 'orange', 'mango']
 
 print(fruit)
