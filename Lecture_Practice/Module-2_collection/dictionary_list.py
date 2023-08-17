@@ -1,4 +1,5 @@
-'''stdata={}
+#--------------1 employee, key static, value (user input)-------------
+stdata={}
 
 keys=['id','name','sub']
 
@@ -7,9 +8,9 @@ for i in range(len(keys)):
 
     stdata[keys[i]]=v
 
-print(stdata)'''
+print(stdata)
 
-#---------------multiple times key static , value (userinput)-----------
+#---------------multiple employees, key static , value (userinput)-----------
 
 stdata={}
 keys=['id','name','sub']

@@ -10,7 +10,7 @@ print(len(stdata))
 
 print(stdata.keys())
 print(stdata.values())
-#=================================
+#====================================
 
 for i in stdata: #return key
     print(i)
