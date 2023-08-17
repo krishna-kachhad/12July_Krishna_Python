@@ -3,9 +3,11 @@ def getdata(id,name):
     print("Name:",name)
 
 
-#getdata(101,'Sanket') #static
+getdata(101,'Sanket') #static
+
 #-----------------------------------------
-#userinput example
+#userdefine example
+
 id=input("Enter ID:")
 nm=input("Enter Name:")
 

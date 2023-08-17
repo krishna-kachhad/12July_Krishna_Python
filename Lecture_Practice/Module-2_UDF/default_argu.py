@@ -6,7 +6,7 @@ def getdata(id,name,sub='Python',city='Rajkot'):
     print("City:",city)
 
 
-#getdata(101,'Sanket')
+#getdata(101,'Sanket') #default arguments
 #getdata(101,'Sanket','PHP') #positional arguments(according to position[sequence])
 
 
