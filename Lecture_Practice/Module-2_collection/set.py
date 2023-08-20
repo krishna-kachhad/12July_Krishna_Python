@@ -22,8 +22,8 @@ print(myset)
 myset.clear()
 #---------------------------------------
 print(myset)
-#myset.remove('b')#its give error coz lowerclass
-#myset.discard('b')# its not give error ....output return as it is
+myset.remove('b')#its give error coz lowerclass
+myset.discard('b')# its not give error ....output return as it is
 
 newset={'P','Q','R','S','A','C'}
 print(newset)
