@@ -1,19 +1,21 @@
+# to make directory through command
+
 import os
 
 #os.remove('newfile.txt') #for file remove
 
-#os.mkdir('Newfolder')
-
 #os.mkdir("Myfolder")
 
-os.chdir('Myfolder/Subfolder')
-os.mkdir('Subfolder')
-#os.mkdir('Newfolder')
-
-#os.chdir('Newfolder')
-#open('hello.txt','x')
-
-#os.remove('hello.txt')
-
 #os.chdir('Myfolder')
-#os.removedirs('Myfolder')
+#os.mkdir('Subfolder') '''OR'''
+
+os.chdir('Myfolder\Subfolder')
+os.mkdir('abc')
+os.chdir("abc")
+open('abc_sub.txt','x')
+
+#os.chdir('Myfolder\Subfolder')
+#os.remove('abc_sub.txt')
+
+'''os.chdir('Myfolder\Subfolder')
+os.removedirs('abc')'''
