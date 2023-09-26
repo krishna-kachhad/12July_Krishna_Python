@@ -10,6 +10,7 @@ class student:
 
 
 # Object of class
+
 st=student()
 print("ID:",st.stid)
 print("Name:",st.stnm)
