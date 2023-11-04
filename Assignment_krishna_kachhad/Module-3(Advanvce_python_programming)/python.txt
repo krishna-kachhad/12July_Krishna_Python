@@ -1,0 +1,5 @@
+Hello
+Welcome to python file management
+Python has inbuilt functions to read a text file
+We can read files in three different ways.
+This is python library
