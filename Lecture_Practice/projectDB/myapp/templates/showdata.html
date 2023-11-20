@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show data</title>
+</head>
+<body>
+    <table align="center" border="1">
+        <tr bgcolor="olive" style="color:whitesmoke">
+            <th>ID</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>DOB</th>
+            <th>Address</th>
+            <th>Update</th>
+            <th>Delete</th>
+
+        </tr>
+        {% for i in data %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.firstname}}</td>
+            <td>{{i.lastname}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.mobile}}</td>
+            <td>{{i.dob}}</td>
+            <td>{{i.address}}</td>
+            <td><a href="/updatedata/{{i.id}}">Update</a></td>
+            <td><a href="/deletedata/{{i.id}}">Delete</a></td>
+        </tr>
+        {% endfor %}
+        
+    </table>
+</body>
+</html>
