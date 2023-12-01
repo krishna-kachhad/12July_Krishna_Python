@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update data</title>
+</head>
+<body>
+    <center><h1 style="color: rgb(247, 117, 70);"> Update User Data </h1></center>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" value="{{stid.firstname}}" placeholder="firstname" name="firstname"><br><br>
+        <input type="text" value="{{stid.lastname}}" placeholder="lastname" name="lastname"><br><br>
+        <input type="email" value="{{stid.email}}" placeholder="email" name="email"><br><br>
+        <input type="number" value="{{stid.mobile}}" placeholder="mobile" name="mobile"><br><br>
+        <input type="date" value="{{stid.dob|date:'Y-m-d'}}"name="dob"><br><br>
+        <textarea placeholder="address" name="address" hidden></textarea><br><br>
+
+        <input type="submit" value="Update">
+        <input type="reset"><br><br>
+
+
+    </form>
+</body>
+</html>

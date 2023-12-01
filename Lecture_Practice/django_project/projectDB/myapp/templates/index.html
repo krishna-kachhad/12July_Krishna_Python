@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome</title>
+</head>
+<body bgcolor="cream">
+    <center><h1 style="color: rgb(247, 117, 70);"> first page </h1></center>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" placeholder="firstname" name="firstname"><br><br>
+        <input type="text" placeholder="lastname" name="lastname"><br><br>
+        <input type="email" placeholder="email" name="email"><br><br>
+        <input type="number" placeholder="mobile" name="mobile"><br><br>
+        <input type="date" name="dob"><br><br>
+        <textarea placeholder="address" name="address"></textarea><br><br>
+
+        <input type="submit">
+        <input type="reset"><br><br>
+         <center><a href="\Showdata"> Showdata</a></center>
+
+
+
+    </form>
+</body>
+</html>
