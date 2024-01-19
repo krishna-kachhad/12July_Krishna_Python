@@ -71,6 +71,17 @@
             </div>
     </nav>
     <!-- Navbar end -->
+    
+    <!-- alert popup msg start -->
+    {% if msg %}
+    <div class="container my-3">
+        <div class="alert alert-danger alert-dismissible fade show w-50" role="alert">
+            <strong>Hey!</strong>{{msg}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
+    {% endif %}
+    <!-- alert popup msg end -->
 
 
 

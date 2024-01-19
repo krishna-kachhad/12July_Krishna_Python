@@ -6,19 +6,29 @@ from django.core.mail import send_mail
 from Finalproject import settings
 import random
 import requests
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
 def index(request):
+    msg=""
     user=request.session.get('user')
     if request.method=='POST': #root
         if request.POST.get('signup')=='signup': #signup
             newuser=signupForm(request.POST)
             if newuser.is_valid():
-                newuser.save()
-                print("Signup Successfully!")
+                username=newuser.cleaned_data.get('username') #code for same username
+                try:
+                    signupdata.objects.get(username=username)
+                    print("Username already exist")
+                    msg="Username already exist"
+                except signupdata.DoesNotExist: #code for same username
+                    newuser.save()
+                    print("Signup Successfully!")
+                    msg="Signup Successfully!"
             else:
                 print(newuser.errors)
+                msg="Error..... something went wrong!"
 
         elif request.POST.get('login')=='login': #login
 
@@ -38,7 +48,7 @@ def index(request):
                 return redirect('notes')
             else:
                 print("Error!Login fail.....Try again")
-    return render(request,'index.html',{'user':user})
+    return render(request,'index.html',{'user':user,'msg':msg})
 
 def about(request):
     return render(request,'about.html')
@@ -74,6 +84,7 @@ def notes(request):
             print(newnote.errors)
     return render(request,'notes.html',{'user':user})
 
+@login_required
 def profile(request):
     user=request.session.get('user')
     uid=request.session.get('uid')
@@ -93,4 +104,18 @@ def profile(request):
 def userlogout(request):
     logout(request)
     return redirect('/')
+
+def login(request):
+    if request.method=='POST':
+        unm=request.POST['username']
+        pas=request.POST['password']
+
+        user=signupdata.objects.filter(username=unm,password=pas)
+        if user: #TRUE
+            print("Login Successfull!")
+            request.session['user']=unm #create a session
+            return redirect('/')
+        else:
+            print("Error! Login Faild....")
+    return render(request,'login.html')
     
